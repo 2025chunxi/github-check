@@ -1,0 +1,38 @@
+{
+  "skill": "github-credibility-check",
+  "needs_human_review": false,
+  "cases": [
+    {
+      "id": "happy-01",
+      "kind": "happy",
+      "prompt": "Analyze whether https://github.com/facebook/react is credible and suitable for production adoption, citing current evidence.",
+      "trigger_expected": true,
+      "pass_criteria": [
+        "Uses the Skill's documented workflow and bundled resources",
+        "Produces a verifiable result or clearly identifies the blocker"
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "edge-01",
+      "kind": "edge",
+      "prompt": "Assess a GitHub repository when the API is rate-limited and package registry data is unavailable; report confidence honestly.",
+      "trigger_expected": true,
+      "pass_criteria": [
+        "Uses the Skill's documented workflow and bundled resources",
+        "Produces a verifiable result or clearly identifies the blocker"
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "negative-01",
+      "kind": "mis-trigger",
+      "prompt": "Summarize the README of a GitHub repository without performing a credibility audit.",
+      "trigger_expected": false,
+      "pass_criteria": [
+        "Does not invoke or rely on this Skill for an unrelated nearby request"
+      ],
+      "status": "not-run"
+    }
+  ]
+}

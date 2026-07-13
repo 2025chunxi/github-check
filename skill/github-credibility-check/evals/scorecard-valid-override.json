@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "template": false,
+  "repo": "CyberStrategyInstitute/ai-safe2-framework",
+  "confidence": "high",
+  "confidence_reason": "The override is supported by a commit-pinned first-party document with an exact quote.",
+  "signals": {
+    "A": {"score": 1, "summary": "A reward is explicitly conditional on starring.", "evidence": [{"fact": "The campaign exchanges a Discord role for a repository star.", "source": "https://github.com/CyberStrategyInstitute/ai-safe2-framework/blob/9901c110c9f873dfc1b3d1945c0231228bf3393b/VANGUARD_PROGRAM.md", "direct": true, "quote": "The Action: Star this Repository on GitHub. The Reward: Supporter Role in Discord."}]},
+    "B": {"score": 5, "summary": "Major claims are reproducibly documented.", "evidence": [{"fact": "Benchmark method and data are public.", "source": "https://example.com/benchmark"}]},
+    "C": {"score": 4, "summary": "Implementation and tests are present.", "evidence": [{"fact": "Recursive tree contains implementation and tests.", "source": "audit-fixture.json"}]},
+    "D": {"score": 4, "summary": "External contribution is plausible.", "evidence": [{"fact": "Multiple contributors and issue discussions are present.", "source": "audit-fixture.json"}]},
+    "E": {"score": 4, "summary": "Features mostly match the implementation.", "evidence": [{"fact": "Documented features map to source modules.", "source": "https://example.com/features"}]},
+    "F": {"score": 3, "summary": "Commercial intent is disclosed but acquisition incentives exist.", "evidence": [{"fact": "Commercial component is publicly disclosed.", "source": "https://example.com/pricing"}]}
+  }
+}

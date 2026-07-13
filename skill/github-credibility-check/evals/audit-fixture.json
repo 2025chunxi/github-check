@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "evidence": {
+    "repo": "CyberStrategyInstitute/ai-safe2-framework",
+    "collected_at": "2026-07-13T00:00:00+00:00"
+  },
+  "adoption_risk": {
+    "score": 18,
+    "level": "low",
+    "factors": [
+      {"points": 10, "factor": "Fixture test factor"},
+      {"points": 8, "factor": "Fixture CI factor"}
+    ]
+  }
+}

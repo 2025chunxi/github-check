@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "template": false,
+  "repo": "CyberStrategyInstitute/ai-safe2-framework",
+  "confidence": "medium",
+  "confidence_reason": "The available evidence is mostly indirect and does not support a score of one.",
+  "signals": {
+    "A": {"score": 1, "summary": "The ratio looks unusual.", "evidence": [{"fact": "Star:fork ratio exceeds 20:1.", "source": "audit-fixture.json"}]},
+    "B": {"score": 3, "summary": "Mixed claim evidence.", "evidence": [{"fact": "Some claims lack citations.", "source": "https://example.com"}]},
+    "C": {"score": 3, "summary": "Moderate code substance.", "evidence": [{"fact": "Code exists.", "source": "audit-fixture.json"}]},
+    "D": {"score": 3, "summary": "Moderate community evidence.", "evidence": [{"fact": "Issues exist.", "source": "audit-fixture.json"}]},
+    "E": {"score": 3, "summary": "Some marketing language.", "evidence": [{"fact": "Marketing copy exists.", "source": "https://example.com"}]},
+    "F": {"score": 3, "summary": "Neutral commercial baseline.", "evidence": [{"fact": "Commercial tier is disclosed.", "source": "https://example.com"}]}
+  }
+}

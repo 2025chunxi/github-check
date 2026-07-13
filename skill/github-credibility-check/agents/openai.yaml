@@ -1,0 +1,7 @@
+interface:
+  display_name: "GitHub Credibility Check"
+  short_description: "Audit GitHub repo trust signals"
+  default_prompt: "Use $github-credibility-check to evaluate whether this GitHub repository is trustworthy."
+
+policy:
+  allow_implicit_invocation: true

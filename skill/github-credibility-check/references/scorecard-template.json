@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "template": true,
+  "repo": "owner/repo",
+  "confidence": "medium",
+  "confidence_reason": "Replace this with the evidence coverage, missing sources, and collection limits.",
+  "signals": {
+    "A": {"score": 3, "summary": "Star trajectory requires review.", "evidence": [{"fact": "Observed fact", "source": "audit.json"}]},
+    "B": {"score": 3, "summary": "Claims have mixed support.", "evidence": [{"fact": "Observed fact", "source": "https://example.com/source"}]},
+    "C": {"score": 3, "summary": "Code has moderate substance.", "evidence": [{"fact": "Observed fact", "source": "audit.json"}]},
+    "D": {"score": 3, "summary": "Community adoption is limited or mixed.", "evidence": [{"fact": "Observed fact", "source": "audit.json"}]},
+    "E": {"score": 3, "summary": "Marketing requires comparison with implemented features.", "evidence": [{"fact": "Observed fact", "source": "https://example.com/source"}]},
+    "F": {"score": 3, "summary": "Commercial intent is disclosed or neutral.", "evidence": [{"fact": "Observed fact", "source": "https://example.com/source"}]}
+  },
+  "reviewer_notes": "Replace every example fact and source, then set template to false. For A=1 or B=1, include direct=true, a source URL, and an exact quote. GitHub blob evidence must be pinned to a full commit SHA."
+}

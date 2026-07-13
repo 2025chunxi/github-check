@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "seed-set-needs-reviewed-labels",
+  "cases": [
+    {"repo": "facebook/react", "repo_type": "mature-framework", "expected_band": "credible"},
+    {"repo": "django/django", "repo_type": "mature-framework", "expected_band": "credible"},
+    {"repo": "astral-sh/ruff", "repo_type": "developer-tool", "expected_band": "credible"},
+    {"repo": "public-apis/public-apis", "repo_type": "curated-list", "expected_band": "type-adjusted"},
+    {"repo": "EbookFoundation/free-programming-books", "repo_type": "documentation-list", "expected_band": "type-adjusted"},
+    {"repo": "huggingface/transformers", "repo_type": "ml-library", "expected_band": "credible"},
+    {
+      "repo": "CyberStrategyInstitute/ai-safe2-framework",
+      "repo_type": "commercial-knowledge-framework",
+      "expected_band": "suspicious",
+      "direct_evidence": {
+        "type": "reward-for-star",
+        "source": "https://github.com/CyberStrategyInstitute/ai-safe2-framework/blob/9901c110c9f873dfc1b3d1945c0231228bf3393b/VANGUARD_PROGRAM.md",
+        "quote": "The Action: Star this Repository on GitHub. The Reward: Supporter Role in Discord.",
+        "verification": "The same document asks users to submit a screenshot as proof of the star action."
+      },
+      "expected_signal_constraints": {
+        "A": 1,
+        "override": "suspicious-cap-54",
+        "basis": "A social reward is explicitly conditional on starring the repository."
+      },
+      "alternative_explanation": "The program is framed as community onboarding, but the social reward is explicitly conditional on starring."
+    },
+    {
+      "repo": "apify/crawlee-python",
+      "repo_type": "developer-tool-incentive-negative-control",
+      "expected_band": "credible-or-mixed",
+      "direct_evidence": {
+        "type": "feedback-reward-not-star-reward",
+        "source": "https://github.com/apify/crawlee/blob/abcbfb158ab3edbb9e7e4c5c6f1d937dea9bb4dd/website/blog/2024/07-05-launching-crawlee-python/index.md",
+        "quote": "We will award the first 10 pieces of feedback that add value and are accepted by our team with exclusive swag.",
+        "verification": "The request to star the repository is separate from the acceptance-based feedback reward."
+      },
+      "expected_signal_constraints": {
+        "A_not": 1,
+        "basis": "The reward condition is accepted feedback, while the star request is separate."
+      },
+      "alternative_explanation": "A nearby giveaway and star request do not establish reward-for-star when the reward condition is accepted feedback."
+    }
+  ],
+  "label_policy": "Add suspicious/manipulated cases only when direct public evidence is recorded beside the label. Preserve negative controls where incentives exist but are not conditional on stars."
+}
