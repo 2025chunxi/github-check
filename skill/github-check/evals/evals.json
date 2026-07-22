@@ -1,5 +1,5 @@
 {
-  "skill": "repo-trust",
+  "skill": "github-check",
   "needs_human_review": false,
   "cases": [
     {

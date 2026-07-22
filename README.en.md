@@ -1,4 +1,4 @@
-<h1 align="center">repo-trust</h1>
+<h1 align="center">github-check</h1>
 
 <p align="center"><strong>Check whether a GitHub project is trustworthy and worth using.</strong></p>
 
@@ -8,14 +8,14 @@
 
 <p align="center">
   <a href="README.md">简体中文</a> · <strong>English</strong> ·
-  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta">Download v0.2.0-beta</a> ·
-  <a href="https://github.com/2025chunxi/repo-trust/issues">Report an issue</a>
+  <a href="https://github.com/2025chunxi/github-check/releases/tag/v0.3.0-beta">Download v0.3.0-beta</a> ·
+  <a href="https://github.com/2025chunxi/github-check/issues">Report an issue</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/repo-trust?include_prereleases&style=flat-square"></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/repo-trust?style=flat-square"></a>
+  <a href="https://github.com/2025chunxi/github-check/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/github-check/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/2025chunxi/github-check/releases/tag/v0.3.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/github-check?include_prereleases&style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/github-check?style=flat-square"></a>
   <img alt="Python 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white">
 </p>
 
@@ -78,7 +78,7 @@ Severe A=1 or B=1 overrides require direct evidence and exact quotes. A star/for
 
 ## Why This Is Not Another Star Detector
 
-| Star-only detector | `repo-trust` |
+| Star-only detector | `github-check` |
 |---|---|
 | Labels a project from one ratio or anomaly curve | Checks code, community, claims, marketing, commercial incentives, and external adoption |
 | Treats “credible” as “production-ready” | Keeps credibility and adoption risk completely separate |
@@ -102,19 +102,19 @@ Send this in Codex:
 
 ```text
 Use $skill-installer to install:
-https://github.com/2025chunxi/repo-trust/tree/main/skill/repo-trust
+https://github.com/2025chunxi/github-check/tree/main/skill/github-check
 ```
 
 Start a new task, then try:
 
 ```text
-Use $repo-trust in standard mode to evaluate https://github.com/owner/repo.
+Use $github-check in standard mode to evaluate https://github.com/owner/repo.
 Keep credibility and adoption risk separate, and report sources, confidence, and missing evidence.
 ```
 
 ### Option 2: Download the release
 
-Download [`repo-trust.skill`](https://github.com/2025chunxi/repo-trust/releases/download/v0.2.0-beta/repo-trust.skill), extract its top-level `repo-trust` directory into `$CODEX_HOME/skills` (default: `~/.codex/skills`), and start a new Codex task to load the Skill.
+Download [`github-check.skill`](https://github.com/2025chunxi/github-check/releases/download/v0.3.0-beta/github-check.skill), extract its top-level `github-check` directory into `$CODEX_HOME/skills` (default: `~/.codex/skills`), and start a new Codex task to load the Skill.
 
 ## The Output Is More Than a Label
 
@@ -135,7 +135,7 @@ python -m pip install -r requirements.txt
 python scripts/build_release.py
 ```
 
-The output is `dist/repo-trust.skill`. The build runs scoring regression tests, strict Skill validation, eight calibration cases, archive integrity checks, and repository-wide scans for secrets, PII, local paths, and unsafe archives. CI excludes live GitHub calls.
+The output is `dist/github-check.skill`. The build runs scoring regression tests, strict Skill validation, eight calibration cases, archive integrity checks, and repository-wide scans for secrets, PII, local paths, and unsafe archives. CI excludes live GitHub calls.
 
 ## Authentication, Privacy, and Evidence Boundaries
 
@@ -148,9 +148,9 @@ The output is `dist/repo-trust.skill`. The build runs scoring regression tests, 
 
 ## Project Status
 
-The current release is `v0.2.0-beta`. This release adopts the new Skill name `repo-trust`; evidence collection, deterministic scoring, and calibration paths are covered by automated tests.
+The current release is `v0.3.0-beta`. This release adopts the final Skill name `github-check`; evidence collection, deterministic scoring, and calibration paths are covered by automated tests.
 
-Open an [Issue](https://github.com/2025chunxi/repo-trust/issues) or read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
+Open an [Issue](https://github.com/2025chunxi/github-check/issues) or read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
 
 ## License
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "GitHub Check"
+  short_description: "Check if a GitHub repo is trustworthy"
+  default_prompt: "Use $github-check to evaluate whether this GitHub repository is trustworthy."
+
+policy:
+  allow_implicit_invocation: true

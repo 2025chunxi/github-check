@@ -1,5 +1,5 @@
 ---
-name: repo-trust
+name: github-check
 description: >
   Assess whether a GitHub repository is trustworthy, overhyped, star-inflated, or
   safe to adopt. Use when the user shares a GitHub URL, owner/repo slug, library
@@ -9,7 +9,7 @@ description: >
   recommendation.
 ---
 
-# Repo Trust
+# GitHub Check
 
 Assess a GitHub project by collecting reproducible signals rather than relying
 on star count, README polish, or model intuition. Prioritize current data,

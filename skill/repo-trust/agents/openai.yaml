@@ -1,7 +1,0 @@
-interface:
-  display_name: "Repo Trust"
-  short_description: "Check whether a GitHub repo is trustworthy"
-  default_prompt: "Use $repo-trust to evaluate whether this GitHub repository is trustworthy."
-
-policy:
-  allow_implicit_invocation: true

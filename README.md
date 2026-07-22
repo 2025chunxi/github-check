@@ -1,4 +1,4 @@
-<h1 align="center">repo-trust</h1>
+<h1 align="center">github-check</h1>
 
 <p align="center"><strong>判断 GitHub 项目是否可信、是否值得用。</strong></p>
 
@@ -8,14 +8,14 @@
 
 <p align="center">
   <strong>简体中文</strong> · <a href="README.en.md">English</a> ·
-  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta">下载 v0.2.0-beta</a> ·
-  <a href="https://github.com/2025chunxi/repo-trust/issues">反馈问题</a>
+  <a href="https://github.com/2025chunxi/github-check/releases/tag/v0.3.0-beta">下载 v0.3.0-beta</a> ·
+  <a href="https://github.com/2025chunxi/github-check/issues">反馈问题</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/repo-trust?include_prereleases&style=flat-square"></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/repo-trust?style=flat-square"></a>
+  <a href="https://github.com/2025chunxi/github-check/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/github-check/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/2025chunxi/github-check/releases/tag/v0.3.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/github-check?include_prereleases&style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/github-check?style=flat-square"></a>
   <img alt="Python 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white">
 </p>
 
@@ -78,7 +78,7 @@ flowchart LR
 
 ## 为什么它不是另一个 Star 检测器
 
-| 只看 Star 的工具 | `repo-trust` |
+| 只看 Star 的工具 | `github-check` |
 |---|---|
 | 用单一比例或异常曲线输出“真/假” | 同时检查代码、社区、声明、营销、商业和外部采用 |
 | 把“可信”误当成“可上生产” | 将可信度与采用风险完全分开 |
@@ -102,19 +102,19 @@ flowchart LR
 
 ```text
 使用 $skill-installer 安装：
-https://github.com/2025chunxi/repo-trust/tree/main/skill/repo-trust
+https://github.com/2025chunxi/github-check/tree/main/skill/github-check
 ```
 
 新建任务后即可这样使用：
 
 ```text
-使用 $repo-trust 以 standard 模式评估 https://github.com/owner/repo。
+使用 $github-check 以 standard 模式评估 https://github.com/owner/repo。
 把可信度和采用风险分开，并明确证据来源、置信度和缺失信息。
 ```
 
 ### 方式二：下载发布包
 
-下载 [`repo-trust.skill`](https://github.com/2025chunxi/repo-trust/releases/download/v0.2.0-beta/repo-trust.skill)，将归档中的 `repo-trust` 顶层目录解压到 `$CODEX_HOME/skills`（默认 `~/.codex/skills`），然后新建 Codex 任务以加载 Skill。
+下载 [`github-check.skill`](https://github.com/2025chunxi/github-check/releases/download/v0.3.0-beta/github-check.skill)，将归档中的 `github-check` 顶层目录解压到 `$CODEX_HOME/skills`（默认 `~/.codex/skills`），然后新建 Codex 任务以加载 Skill。
 
 ## 输出不仅是一句话
 
@@ -135,7 +135,7 @@ python -m pip install -r requirements.txt
 python scripts/build_release.py
 ```
 
-输出为 `dist/repo-trust.skill`。构建会执行评分回归测试、严格 Skill 校验、8 个校准案例、归档完整性检查，以及仓库级密钥、PII、本机路径和归档安全扫描。CI 不执行实时 GitHub 请求。
+输出为 `dist/github-check.skill`。构建会执行评分回归测试、严格 Skill 校验、8 个校准案例、归档完整性检查，以及仓库级密钥、PII、本机路径和归档安全扫描。CI 不执行实时 GitHub 请求。
 
 ## 认证、隐私与证据边界
 
@@ -148,9 +148,9 @@ python scripts/build_release.py
 
 ## 项目状态
 
-当前版本为 `v0.2.0-beta`。本版本启用新的 Skill 名称 `repo-trust`；证据采集、确定性评分和校准流程已有自动化测试。
+当前版本为 `v0.3.0-beta`。本版本启用最终名称 `github-check`；证据采集、确定性评分和校准流程已有自动化测试。
 
-欢迎提交 [Issue](https://github.com/2025chunxi/repo-trust/issues) 或阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 参与改进。
+欢迎提交 [Issue](https://github.com/2025chunxi/github-check/issues) 或阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 参与改进。
 
 ## 许可证
 

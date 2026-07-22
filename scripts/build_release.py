@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run offline checks and build repo-trust.skill."""
+"""Run offline checks and build github-check.skill."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skill" / "repo-trust"
+SKILL = ROOT / "skill" / "github-check"
 DIST = ROOT / "dist"
 
 
@@ -27,7 +27,7 @@ def verify_archive(path: Path) -> None:
             raise RuntimeError(f"Corrupt archive member: {bad_member}")
         names = {name.rstrip("/") for name in archive.namelist() if name.rstrip("/")}
     roots = {name.split("/", 1)[0] for name in names}
-    if roots != {"repo-trust"}:
+    if roots != {"github-check"}:
         raise RuntimeError(f"Unexpected archive roots: {sorted(roots)}")
     forbidden = [
         name for name in names
@@ -38,11 +38,11 @@ def verify_archive(path: Path) -> None:
     if forbidden:
         raise RuntimeError(f"Forbidden release files: {forbidden}")
     required = {
-        "repo-trust/SKILL.md",
-        "repo-trust/agents/openai.yaml",
-        "repo-trust/scripts/audit_repo.py",
-        "repo-trust/scripts/score_report.py",
-        "repo-trust/references/scorecard-template.json",
+        "github-check/SKILL.md",
+        "github-check/agents/openai.yaml",
+        "github-check/scripts/audit_repo.py",
+        "github-check/scripts/score_report.py",
+        "github-check/references/scorecard-template.json",
     }
     if missing := sorted(required - names):
         raise RuntimeError(f"Missing release files: {missing}")
@@ -57,9 +57,9 @@ def main() -> int:
     run(python, SKILL / "scripts" / "validate_calibration.py", SKILL / "references" / "calibration-repos.json")
     DIST.mkdir(parents=True, exist_ok=True)
     run(python, packager, SKILL, DIST)
-    verify_archive(DIST / "repo-trust.skill")
+    verify_archive(DIST / "github-check.skill")
     run(python, ROOT / "scripts" / "security_scan.py")
-    print(DIST / "repo-trust.skill")
+    print(DIST / "github-check.skill")
     return 0
 
 
