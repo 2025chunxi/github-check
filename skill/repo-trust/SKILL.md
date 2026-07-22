@@ -1,7 +1,7 @@
 ---
-name: github-credibility-check
+name: repo-trust
 description: >
-  Analyze whether a GitHub repository is credible, overhyped, star-inflated, or
+  Assess whether a GitHub repository is trustworthy, overhyped, star-inflated, or
   safe to adopt. Use when the user shares a GitHub URL, owner/repo slug, library
   name, trending project, or asks whether an open-source project is legit,
   trustworthy, fake-starred, production-ready, or worth using. Produces an
@@ -9,7 +9,7 @@ description: >
   recommendation.
 ---
 
-# GitHub Credibility Check
+# Repo Trust
 
 Assess a GitHub project by collecting reproducible signals rather than relying
 on star count, README polish, or model intuition. Prioritize current data,

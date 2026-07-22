@@ -24,7 +24,7 @@ import urllib.request
 
 def request_json(url: str, headers: dict[str, str] | None = None):
     request = urllib.request.Request(url)
-    request.add_header("User-Agent", "github-credibility-check-skill")
+    request.add_header("User-Agent", "repo-trust-skill")
     for key, value in (headers or {}).items():
         request.add_header(key, value)
 

@@ -1,21 +1,21 @@
-<h1 align="center">github-credibility-check</h1>
+<h1 align="center">repo-trust</h1>
 
-<p align="center"><strong>Stop judging repositories by stars alone. Use reviewable evidence to decide whether a GitHub project is credible and worth adopting.</strong></p>
+<p align="center"><strong>Check whether a GitHub project is trustworthy and worth using.</strong></p>
 
 <p align="center">
-  This is not a “fake-star detector,” and it does not convict projects from anomalous ratios. It reports credibility, confidence, adoption risk, and evidence gaps separately.
+  Go beyond stars: inspect code, community, claims, and adoption risk, with explicit evidence gaps.
 </p>
 
 <p align="center">
   <a href="README.md">简体中文</a> · <strong>English</strong> ·
-  <a href="https://github.com/2025chunxi/github-credibility-check/releases/tag/v0.1.0-beta">Download v0.1.0-beta</a> ·
-  <a href="https://github.com/2025chunxi/github-credibility-check/issues">Report an issue</a>
+  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta">Download v0.2.0-beta</a> ·
+  <a href="https://github.com/2025chunxi/repo-trust/issues">Report an issue</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/2025chunxi/github-credibility-check/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/github-credibility-check/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/2025chunxi/github-credibility-check/releases/tag/v0.1.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/github-credibility-check?include_prereleases&style=flat-square"></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/github-credibility-check?style=flat-square"></a>
+  <a href="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/2025chunxi/repo-trust/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/2025chunxi/repo-trust/releases/tag/v0.2.0-beta"><img alt="Release" src="https://img.shields.io/github/v/release/2025chunxi/repo-trust?include_prereleases&style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/2025chunxi/repo-trust?style=flat-square"></a>
   <img alt="Python 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white">
 </p>
 
@@ -78,7 +78,7 @@ Severe A=1 or B=1 overrides require direct evidence and exact quotes. A star/for
 
 ## Why This Is Not Another Star Detector
 
-| Star-only detector | `github-credibility-check` |
+| Star-only detector | `repo-trust` |
 |---|---|
 | Labels a project from one ratio or anomaly curve | Checks code, community, claims, marketing, commercial incentives, and external adoption |
 | Treats “credible” as “production-ready” | Keeps credibility and adoption risk completely separate |
@@ -102,19 +102,19 @@ Send this in Codex:
 
 ```text
 Use $skill-installer to install:
-https://github.com/2025chunxi/github-credibility-check/tree/main/skill/github-credibility-check
+https://github.com/2025chunxi/repo-trust/tree/main/skill/repo-trust
 ```
 
 Start a new task, then try:
 
 ```text
-Use $github-credibility-check in standard mode to evaluate https://github.com/owner/repo.
+Use $repo-trust in standard mode to evaluate https://github.com/owner/repo.
 Keep credibility and adoption risk separate, and report sources, confidence, and missing evidence.
 ```
 
 ### Option 2: Download the release
 
-Download [`github-credibility-check.skill`](https://github.com/2025chunxi/github-credibility-check/releases/download/v0.1.0-beta/github-credibility-check.skill), extract its top-level `github-credibility-check` directory into `$CODEX_HOME/skills` (default: `~/.codex/skills`), and start a new Codex task to load the Skill.
+Download [`repo-trust.skill`](https://github.com/2025chunxi/repo-trust/releases/download/v0.2.0-beta/repo-trust.skill), extract its top-level `repo-trust` directory into `$CODEX_HOME/skills` (default: `~/.codex/skills`), and start a new Codex task to load the Skill.
 
 ## The Output Is More Than a Label
 
@@ -135,7 +135,7 @@ python -m pip install -r requirements.txt
 python scripts/build_release.py
 ```
 
-The output is `dist/github-credibility-check.skill`. The build runs scoring regression tests, strict Skill validation, eight calibration cases, archive integrity checks, and repository-wide scans for secrets, PII, local paths, and unsafe archives. CI excludes live GitHub calls.
+The output is `dist/repo-trust.skill`. The build runs scoring regression tests, strict Skill validation, eight calibration cases, archive integrity checks, and repository-wide scans for secrets, PII, local paths, and unsafe archives. CI excludes live GitHub calls.
 
 ## Authentication, Privacy, and Evidence Boundaries
 
@@ -148,9 +148,9 @@ The output is `dist/github-credibility-check.skill`. The build runs scoring regr
 
 ## Project Status
 
-The current release is `v0.1.0-beta`. Evidence collection, deterministic scoring, and calibration paths are covered by automated tests. Heuristic conclusions are reviewable decision support, not proof of manipulation or production safety.
+The current release is `v0.2.0-beta`. This release adopts the new Skill name `repo-trust`; evidence collection, deterministic scoring, and calibration paths are covered by automated tests.
 
-Open an [Issue](https://github.com/2025chunxi/github-credibility-check/issues) or read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
+Open an [Issue](https://github.com/2025chunxi/repo-trust/issues) or read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
 
 ## License
 

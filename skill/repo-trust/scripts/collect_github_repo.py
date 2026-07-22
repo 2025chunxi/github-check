@@ -34,7 +34,7 @@ class GitHubClient:
     def get(self, path: str, accept: str = "application/vnd.github+json"):
         request = urllib.request.Request(API_ROOT + path)
         request.add_header("Accept", accept)
-        request.add_header("User-Agent", "github-credibility-check-skill")
+        request.add_header("User-Agent", "repo-trust-skill")
         request.add_header("X-GitHub-Api-Version", "2022-11-28")
         if self.token:
             request.add_header("Authorization", f"Bearer {self.token}")
